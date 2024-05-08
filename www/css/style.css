@@ -5,36 +5,86 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
-
-#sidebar {
-  width: 240px;
-  height: 100%;
-  background-color: rgb(5, 5, 59);
+.navbar {
   position: fixed;
-  z-index: 1;
   top: 0;
   left: 0;
-  padding-top: 20%;
-  overflow-x: hidden;
+  width: 100vw;
+  background-color: rgb(90, 0, 0);
+  overflow: hidden;
 }
-#sidebar a,
-a:visited {
-  padding: 10px;
-  font-size: 32px;
-  color: rgba(255, 255, 255, 0.5);
+.nav {
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-logo {
+  padding: 14px;
+  font-weight: 600;
+  color: #ffff ;
+  float: left;
+  font-size: 1.35em;
   text-decoration: none;
-  display: block;
-}
-#sidebar a:hover {
-  background-color: #fff;
-  color: rgb(5, 5, 59);
 }
 
-#main {
-  height: 100%;
-  position: fixed;
-  background-color: aliceblue;
-  left: 240px;
+.nav-item {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: lightgray;
+  text-decoration: none;
+  padding: 14px;
+}
+
+.nav-item:hover {
+  color: white;
+}
+
+.nav-item:active {
+  background-color: #ffff;
+  color: black;
+}
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  top:0;
+  left:0;
   padding: 20px;
-  overflow-x: hidden;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-content h1 {
+  margin:0;
+  font-size: 3em;
+  font-weight: 800;
+}
+.hero-content p {
+  margin:0;
+  font-size: 3em;
+}
+
+@media (max-width: 1200px) {
+ .nav, .nav-item {
+  display:none;
+ }
+}
+
+.btn {
+  display:inline-flex;
+  font-size: 1.8em;
+  padding:20px;
+  margin-right:20px;
+  background-color: rgb(90, 0, 0);
+  color: #ffff;
+  border: 1px solid rgb(90, 0, 0);
+  border-radius: 4px;
+}
+
+.btn:hover {
+  transition: background-color .5s;
+  background-color: rgb(255, 255, 255);
+  color: rgb(90, 0, 0);
+  border: 1px solid rgb(90, 0, 0);
 }
